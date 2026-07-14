@@ -10,7 +10,7 @@ class NobiORasulApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Nobi O Rasul (AS) - Islamic Stories',
+      title: 'নবী ও রাসূল (আঃ) - ইসলামিক গল্প',
       debugShowCheckedModeBanner: false,
       theme: _buildIslamicTheme(Brightness.light),
       darkTheme: _buildIslamicTheme(Brightness.dark),
@@ -92,10 +92,10 @@ class _MainDashboardState extends State<MainDashboard> {
               },
               labelType: NavigationRailLabelType.all,
               destinations: const [
-                NavigationRailDestination(icon: Icon(Icons.home), label: Text('Home')),
-                NavigationRailDestination(icon: Icon(Icons.menu_book), label: Text('Prophets')),
-                NavigationRailDestination(icon: Icon(Icons.timeline), label: Text('Timeline')),
-                NavigationRailDestination(icon: Icon(Icons.settings), label: Text('Settings')),
+                NavigationRailDestination(icon: Icon(Icons.home), label: Text('হোম')),
+                NavigationRailDestination(icon: Icon(Icons.menu_book), label: Text('নবীগণ')),
+                NavigationRailDestination(icon: Icon(Icons.timeline), label: Text('টাইমলাইন')),
+                NavigationRailDestination(icon: Icon(Icons.settings), label: Text('সেটিংস')),
               ],
             ),
           if (isDesktop) const VerticalDivider(thickness: 1, width: 1),
@@ -112,10 +112,10 @@ class _MainDashboardState extends State<MainDashboard> {
                 });
               },
               destinations: const [
-                NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
-                NavigationDestination(icon: Icon(Icons.menu_book), label: 'Prophets'),
-                NavigationDestination(icon: Icon(Icons.timeline), label: 'Timeline'),
-                NavigationDestination(icon: Icon(Icons.settings), label: 'Settings'),
+                NavigationDestination(icon: Icon(Icons.home), label: 'হোম'),
+                NavigationDestination(icon: Icon(Icons.menu_book), label: 'নবীগণ'),
+                NavigationDestination(icon: Icon(Icons.timeline), label: 'টাইমলাইন'),
+                NavigationDestination(icon: Icon(Icons.settings), label: 'সেটিংস'),
               ],
             ),
     );
@@ -128,7 +128,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Nobi O Rasul (AS)')),
+      appBar: AppBar(title: const Text('নবী ও রাসূল (আঃ)')),
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(16.0),
@@ -137,13 +137,13 @@ class HomeScreen extends StatelessWidget {
             children: [
               _buildBanner(context),
               const SizedBox(height: 24),
-              Text('Daily Inspiration', style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
+              Text('দৈনন্দিন অনুপ্রেরণা', style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
               const SizedBox(height: 16),
-              _buildDailyCard(context, 'Daily Hadith', 'The best among you are those who have the best manners and character. (Sahih Bukhari)', Icons.format_quote),
+              _buildDailyCard(context, 'দৈনন্দিন হাদিস', 'তোমাদের মধ্যে সেই উত্তম যার চরিত্র সবচেয়ে সুন্দর। (সহীহ বুখারী)', Icons.format_quote),
               const SizedBox(height: 16),
-              _buildDailyCard(context, 'Daily Dua', 'O Allah, I ask You for beneficial knowledge, goodly provision and acceptable deeds.', Icons.back_hand),
+              _buildDailyCard(context, 'দৈনন্দিন দোয়া', 'হে আল্লাহ, আমি আপনার কাছে উপকারী জ্ঞান, হালাল রিজিক এবং গ্রহণযোগ্য আমল চাই।', Icons.back_hand),
               const SizedBox(height: 24),
-              Text('Featured Prophet', style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
+              Text('প্রধান নবী', style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
               const SizedBox(height: 16),
               _buildFeaturedProphetCard(context),
             ],
@@ -169,14 +169,14 @@ class HomeScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Welcome to', style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Colors.white70)),
+          Text('স্বাগতম', style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Colors.white70)),
           const SizedBox(height: 8),
-          Text('Islamic Stories', style: Theme.of(context).textTheme.headlineMedium?.copyWith(color: Colors.white, fontWeight: FontWeight.bold)),
+          Text('ইসলামিক গল্প', style: Theme.of(context).textTheme.headlineMedium?.copyWith(color: Colors.white, fontWeight: FontWeight.bold)),
           const SizedBox(height: 16),
           ElevatedButton.icon(
             onPressed: () {},
             icon: const Icon(Icons.play_arrow),
-            label: const Text('Continue Reading'),
+            label: const Text('পড়তে থাকুন'),
             style: ElevatedButton.styleFrom(
               foregroundColor: Theme.of(context).colorScheme.primary,
               backgroundColor: Theme.of(context).colorScheme.onPrimary,
@@ -246,17 +246,9 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Muhammad ﷺ', style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
+                  Text('মুহাম্মদ ﷺ', style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
                   const SizedBox(height: 8),
-                  Text('The Final Messenger of Allah. Known as Al-Amin (The Trustworthy). Brought the final revelation, the Quran.', style: Theme.of(context).textTheme.bodyMedium),
-                  const SizedBox(height: 16),
-                  Align(
-                    alignment: Alignment.centerRight,
-                    child: TextButton(
-                      onPressed: () {},
-                      child: const Text('Read Story'),
-                    ),
-                  ),
+                  Text('সর্বশেষ নবী ও রাসূল, মানবতার জন্য রহমত।', style: Theme.of(context).textTheme.bodyMedium),
                 ],
               ),
             ),
@@ -270,83 +262,40 @@ class HomeScreen extends StatelessWidget {
 class AllProphetsScreen extends StatelessWidget {
   const AllProphetsScreen({super.key});
 
-  final List<Map<String, String>> prophets = const [
-    {'name': 'Adam (AS)', 'arabic': 'آدَم', 'desc': 'The first human and prophet.'},
-    {'name': 'Nuh (AS)', 'arabic': 'نُوح', 'desc': 'The builder of the Ark.'},
-    {'name': 'Ibrahim (AS)', 'arabic': 'إِبْرَاهِيم', 'desc': 'The friend of Allah.'},
-    {'name': 'Musa (AS)', 'arabic': 'مُوسَى', 'desc': 'He who spoke to Allah.'},
-    {'name': 'Isa (AS)', 'arabic': 'عِيسَى', 'desc': 'The Messiah, son of Maryam.'},
-    {'name': 'Muhammad ﷺ', 'arabic': 'مُحَمَّد', 'desc': 'The seal of the prophets.'},
-  ];
-
   @override
   Widget build(BuildContext context) {
+    final List<Map<String, String>> prophets = [
+      {'name': 'আদম (আঃ)', 'arabic': 'آدَم', 'desc': 'প্রথম মানব ও নবী।'},
+      {'name': 'নূহ (আঃ)', 'arabic': 'نُوح', 'desc': 'মহা প্লাবন এবং নৌকার নির্মাতা।'},
+      {'name': 'ইব্রাহিম (আঃ)', 'arabic': 'إِبْرَاهِيم', 'desc': 'আল্লাহর বন্ধু (খলিলুল্লাহ)।'},
+      {'name': 'মুসা (আঃ)', 'arabic': 'مُوسَىٰ', 'desc': 'যিনি আল্লাহর সাথে কথা বলেছেন (কালিমুল্লাহ)।'},
+      {'name': 'ঈসা (আঃ)', 'arabic': 'عِيسَىٰ', 'desc': 'মরিয়মের পুত্র, আল্লাহর রুহ।'},
+      {'name': 'মুহাম্মদ ﷺ', 'arabic': 'مُحَمَّد', 'desc': 'সর্বশেষ নবী ও রাসূল।'},
+    ];
+
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('All Prophets'),
-        actions: [
-          IconButton(icon: const Icon(Icons.search), onPressed: () {}),
-        ],
-      ),
+      appBar: AppBar(title: const Text('সকল নবীগণ')),
       body: SafeArea(
-        child: LayoutBuilder(
-          builder: (context, constraints) {
-            int crossAxisCount = constraints.maxWidth < 600 ? 1 : (constraints.maxWidth / 300).floor();
-            return GridView.builder(
-              padding: const EdgeInsets.all(16),
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: crossAxisCount,
-                childAspectRatio: crossAxisCount == 1 ? 2.5 : 1.5,
-                crossAxisSpacing: 16,
-                mainAxisSpacing: 16,
-              ),
-              itemCount: prophets.length,
-              itemBuilder: (context, index) {
-                final prophet = prophets[index];
-                return Card(
-                  child: InkWell(
-                    onTap: () {},
-                    child: Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Row(
-                        children: [
-                          Container(
-                            width: 60,
-                            height: 60,
-                            decoration: BoxDecoration(
-                              color: Theme.of(context).colorScheme.primaryContainer,
-                              shape: BoxShape.circle,
-                            ),
-                            child: Center(
-                              child: Text(
-                                prophet['arabic']!,
-                                style: TextStyle(
-                                  color: Theme.of(context).colorScheme.onPrimaryContainer,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16,
-                                ),
-                              ),
-                            ),
-                          ),
-                          const SizedBox(width: 16),
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(prophet['name']!, style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
-                                const SizedBox(height: 4),
-                                Text(prophet['desc']!, style: Theme.of(context).textTheme.bodySmall, maxLines: 2, overflow: TextOverflow.ellipsis),
-                              ],
-                            ),
-                          ),
-                          const Icon(Icons.chevron_right),
-                        ],
-                      ),
-                    ),
+        child: ListView.builder(
+          padding: const EdgeInsets.all(16.0),
+          itemCount: prophets.length,
+          itemBuilder: (context, index) {
+            return Card(
+              margin: const EdgeInsets.only(bottom: 16),
+              child: ListTile(
+                contentPadding: const EdgeInsets.all(16),
+                leading: CircleAvatar(
+                  backgroundColor: Theme.of(context).colorScheme.primaryContainer,
+                  child: Text(
+                    prophets[index]['arabic']!.substring(0, 1),
+                    style: TextStyle(color: Theme.of(context).colorScheme.onPrimaryContainer),
                   ),
-                );
-              },
+                ),
+                title: Text(prophets[index]['name']!, style: const TextStyle(fontWeight: FontWeight.bold)),
+                subtitle: Text(prophets[index]['desc']!),
+                trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+                onTap: () {},
+              ),
             );
           },
         ),
@@ -361,10 +310,8 @@ class TimelineScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Timeline')),
-      body: const Center(
-        child: Text('Interactive Timeline Coming Soon'),
-      ),
+      appBar: AppBar(title: const Text('টাইমলাইন')),
+      body: const Center(child: Text('নবীগণের ঐতিহাসিক টাইমলাইন এখানে প্রদর্শিত হবে।')),
     );
   }
 }
@@ -375,31 +322,23 @@ class SettingsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Settings')),
+      appBar: AppBar(title: const Text('সেটিংস')),
       body: ListView(
         children: [
           ListTile(
             leading: const Icon(Icons.language),
-            title: const Text('Language'),
-            subtitle: const Text('English'),
+            title: const Text('ভাষা'),
+            subtitle: const Text('বাংলা'),
             onTap: () {},
           ),
           ListTile(
             leading: const Icon(Icons.dark_mode),
-            title: const Text('Theme'),
-            subtitle: const Text('System Default'),
-            onTap: () {},
+            title: const Text('ডার্ক মোড'),
+            trailing: Switch(value: false, onChanged: (val) {}),
           ),
-          ListTile(
-            leading: const Icon(Icons.text_increase),
-            title: const Text('Font Size'),
-            subtitle: const Text('Medium'),
-            onTap: () {},
-          ),
-          const Divider(),
           ListTile(
             leading: const Icon(Icons.info),
-            title: const Text('About'),
+            title: const Text('আমাদের সম্পর্কে'),
             onTap: () {},
           ),
         ],

@@ -1,30 +1,16 @@
-# Nobi O Rasul (AS) - Islamic Stories
+# নবী ও রাসূল (আঃ) - ইসলামিক গল্প
 
-A complete Production-Level Islamic Educational Mobile Application using Flutter + Firebase. 
+এই অ্যাপটিতে ইসলামে উল্লেখিত সকল নবী ও রাসূলদের বিস্তারিত জীবনী, তাদের মুজেজা, শিক্ষণীয় ঘটনা এবং টাইমলাইন অন্তর্ভুক্ত করা হয়েছে। অ্যাপটি সম্পূর্ণ বাংলায় তৈরি করা হয়েছে যেন শিশু, কিশোর ও বয়স্ক সবাই সহজে পড়তে ও শিখতে পারে। 
 
-## Features
-- **All Prophets**: Learn about all the Prophets mentioned in Islam.
-- **Stories & Miracles**: Read authentic stories and miracles with Quran and Hadith references.
-- **Interactive Timeline**: Chronological order of events.
-- **Maps**: Historical regions and journey routes.
-- **Quiz**: Test your knowledge.
-- **Multilingual**: Bangla, English, Arabic support.
-- **Theme**: Premium Islamic Theme with Dark/Light modes.
-- **Offline Support**: Read stories offline.
+## ফিচারসমূহ
+- **সকল নবীর জীবনী:** আদম (আঃ) থেকে শুরু করে মুহাম্মদ ﷺ পর্যন্ত সকলের বিস্তারিত ইতিহাস।
+- **টাইমলাইন ও ম্যাপ:** ঐতিহাসিক ঘটনাবলির ক্রমানুসারে টাইমলাইন এবং ম্যাপ।
+- **অফলাইন সাপোর্ট:** ইন্টারনেট ছাড়াই পড়ার সুবিধা।
+- **ডাইনামিক থিম:** ইসলামিক সবুজ ও সোনালী রঙের সংমিশ্রণে ডার্ক ও লাইট মোড।
 
-## Tech Stack
-- Flutter (Latest Stable)
-- Firebase (Auth, Firestore, Storage)
-- Riverpod (State Management)
-- Go Router (Navigation)
-- Hive (Local Storage)
-- Material 3 Design
+## প্রযুক্তি
+- ফ্লাটার (Flutter)
+- ম্যাটেরিয়াল ৩ (Material 3)
 
-## Setup
-1. Run `flutter pub get`
-2. Configure Firebase using `flutterfire configure`
-3. Run `flutter run`
-
----
-## About CouldAI
-This application was generated with [CouldAI](https://could.ai), an AI app builder for cross-platform apps that turns prompts into real native iOS, Android, Web, and Desktop apps with autonomous AI agents that architect, build, test, deploy, and iterate production-ready applications.
+## CouldAI সম্পর্কে
+এই অ্যাপটি [CouldAI](https://could.ai) ব্যবহার করে তৈরি করা হয়েছে। CouldAI একটি এআই অ্যাপ বিল্ডার যা প্রম্পট থেকে সরাসরি ক্রস-প্ল্যাটফর্ম অ্যাপ (iOS, Android, Web, Desktop) তৈরি করতে পারে। এর স্বয়ংক্রিয় এআই এজেন্টগুলো আর্কিটেকচার, কোডিং, টেস্টিং এবং ডিপ্লয়মেন্টের কাজ নিপুণভাবে পরিচালনা করে প্রোডাকশন-রেডি অ্যাপ্লিকেশন উপহার দেয়।
